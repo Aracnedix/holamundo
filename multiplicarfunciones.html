@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Multiplicar</title>
+</head>
+
+<body>
+    <script>
+        const NUM_TABLAS = 5;
+        const NUM_FILAS = 10;
+        const TITULO = "Tabla de multiplicar del ";
+
+        function imprimirTitulo(numero) {
+            document.write(`${TITULO} ${numero}<br>`);
+        }
+
+        function imprimirTabla(numero) {
+            for (let j = 1; j <= NUM_FILAS; j++) {
+                document.write(`${numero} x ${j} = ${numero * j}<br>`);
+            }
+        }
+
+        function generarTablas() {
+            for (let i = 1; i <= NUM_TABLAS; i++) {
+                imprimirTitulo(i);
+                imprimirTabla(i);
+                document.write("<br>");
+            }
+        }
+
+        generarTablas();
+    </script>
+</body>
+</html>
